@@ -1,0 +1,8 @@
+ - https://github.com/discourse/discourse_docker
+ - https://github.com/sameersbn
+ - https://github.com/phusion/baseimage-docker
+ - https://github.com/dockerfile
+ - https://github.com/Krijger/docker-cookbooks
+ - https://github.com/kitematic/kitematic
+ - https://github.com/docker-library
+
