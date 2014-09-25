@@ -1,5 +1,5 @@
 NAME = dockerbase/android
-VERSION = 1.0
+VERSION = 1.1
 
 .PHONY: all build test tag_latest release ssh enter
 
@@ -23,7 +23,7 @@ ls_volume:
 
 version:
 	docker run -it --rm $(NAME):$(VERSION) sh -c " lsb_release -d ; git --version ; ruby -v ; ssh -V ; make -v " | tee COMPONENTS
-	docker run -it --rm $(NAME):$(VERSION) sh -c " . /home/devbase/.bashrc; javac -version ; java -version " | tee -a COMPONENTS
+	docker run -it --rm $(NAME):$(VERSION) sh -c " javac -version ; java -version " | tee -a COMPONENTS
 	docker run -it --rm $(NAME):$(VERSION) sh -c " echo -n Android SDK: ; readlink ~/.android/android-sdk.linux " | tee -a COMPONENTS
 	docker run -it --rm $(NAME):$(VERSION) sh -c " echo -n Android NDK: ; readlink ~/.android/android-ndk.linux " | tee -a COMPONENTS
 	docker run -it --rm $(NAME):$(VERSION) sh -c " echo -n Android build-tools: ; ls ~/.android/android-sdk.linux/build-tools/ " | tee -a COMPONENTS
