@@ -1,4 +1,4 @@
-# VERSION 1.1
+# VERSION 1.2
 # DOCKER-VERSION  1.2.0
 # AUTHOR:         Richard Lee <lifuzu@gmail.com>
 # DESCRIPTION:    Android Image Container

@@ -19,6 +19,8 @@
 
 ### Create a sample gradle project - helloworld
 
-    $ android create project --activity helloworld --package com.example.helloworld --target android-19 --path helloworld --gradle --gradle-version 0.12.2
+    $ android create project --activity helloworld --package com.example.helloworld --target android-19 --path helloworld --gradle --gradle-version 1.+
     $ cd helloworld
+    $ # modify gradle/wrapper/gradle-wrapper.properties, change to 'gradle-2.2.1-all.zip'
+    $ # modify build.gradle, change 'runProguard' to 'minifyEnabled'
     $ ./gradlew clean build
