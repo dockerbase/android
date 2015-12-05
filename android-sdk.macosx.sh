@@ -5,17 +5,16 @@ PKG_INSTALL_PATH=.
 }
 
 # Information Of Package
-PKG_TYPE=linux
-PKG_ALIAS=android-sdk.$PKG_TYPE
-PKG_VERSION=android-sdk_r24.4.1-$PKG_TYPE
-PKG_PACKAGE=$PKG_VERSION.tgz
+PKG_ALIAS=android-sdk.macosx
+PKG_VERSION=android-sdk_r24.4.1-macosx
+PKG_PACKAGE=$PKG_VERSION.zip
 PKG_LINK=http://dl.google.com/android/$PKG_PACKAGE
 
 # Install Android SDK
 cd /tmp && \
 curl -O -L $PKG_LINK && \
-tar -zxf /tmp/$PKG_PACKAGE -C $PKG_INSTALL_PATH && \
-mv $PKG_INSTALL_PATH/android-sdk-$PKG_TYPE $PKG_INSTALL_PATH/$PKG_VERSION && \
+unzip /tmp/$PKG_PACKAGE -d $PKG_INSTALL_PATH && \
+mv $PKG_INSTALL_PATH/android-sdk-macosx $PKG_INSTALL_PATH/$PKG_VERSION && \
 ln -s $PKG_INSTALL_PATH/$PKG_VERSION $PKG_INSTALL_PATH/$PKG_ALIAS
 
 export PATH=$PATH:$PKG_INSTALL_PATH/$PKG_ALIAS/tools
